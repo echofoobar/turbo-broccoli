@@ -62,6 +62,7 @@ We generated couple bar charts confirming that there is indeed dense submatrices
 
 ## Summary
 
-For our research we will be measuring the performance(space and time) of our proposed storage method when doing matrix multiplication.
-The analysis 
- 
+We used Python to perform some basic data analysis on the medical picture dataset, then imported the results into BSR to get a better understanding. Binary pixels give the images the same size of (512,512). Additionally, we conducted a few quick checks to see if the dataset contained dense sub-matrices, a crucial characteristic for our upcoming work. And we describe the C++-based performance measurement method we used for our project. The dataset's basic feature function graphics are then drawn. The result of the data analysis indicated that our project topic are meaningful and feasible.  
+
+In the future we will design the storage method based on BSR, and apply it on CPU and GPU based on C++. And move it to python if possible, to combine with practical sparse matrix multiplication applications. For our research we will be measuring the performance(space and time) of our proposed storage method when doing matrix multiplication.
+
