@@ -54,6 +54,11 @@ We will get GFlops, Bandwidth, and computation time we want via:
 To measure and analysis the performance of the algorithm.
 We will also track the memory occupation condition for shared memory and global memory. And estimate the theoretical data exchange frequency for the proposed algorithm
 
+## Figures
+We generated couple bar charts confirming that there is indeed dense submatrices in our CT-scan matricies.
+![Figure1](https://github.com/echofoobar/turbo-broccoli/blob/master/Dense_1.png)
+![Figure2](https://github.com/echofoobar/turbo-broccoli/blob/master/Dense_2.png)
+![Figure3](https://github.com/echofoobar/turbo-broccoli/blob/master/Dense_3.png)
 
 ## Summary
 
