@@ -56,9 +56,9 @@ We will also track the memory occupation condition for shared memory and global 
 
 ## Figures
 We generated couple bar charts confirming that there is indeed dense submatrices in our CT-scan matricies.
-![Figure1](https://github.com/echofoobar/turbo-broccoli/blob/master/Dense_1.png)
-![Figure2](https://github.com/echofoobar/turbo-broccoli/blob/master/Dense_2.png)
-![Figure3](https://github.com/echofoobar/turbo-broccoli/blob/master/Dense_3.png)
+![Figure1](./Dense_1.png)
+![Figure2](./Dense_2.png)
+![Figure3](./Dense_3.png)
 
 ## Summary
 
