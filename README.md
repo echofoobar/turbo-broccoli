@@ -27,6 +27,36 @@ in the correct folder.
 
 - With exploratory data anaylsis we were investigating if the images and generated sparse matrices contain dense sub-matrices. This was done with python and if CT-scan contains dense submatrix, program will just simply print 'True' to stdout. The check was done by first creating new matrix of sum of every neighboring (3 elements every direction) elements and this "neighbor_sum_matrix" was then transformed to array by summing every element in each row. Finally it was checked that if in this array there is at least one row with only zeroes (the sum is 0) and at least one row with sum value higher than 512 (this was chosen by comparing the results).
 
+## Statistical tools
+
+Since our project work aims at improving the sparse matrix multiplication performance, and do not need to analyze the semantical analysis for data, we will need standard and tools to measure the performance of sparse matrix multiplication based on our future proposed storage method. The measurement will be applied via C++
+
+The Timer will be defined as follows, and the multiplication required timing will be at the middle of timer.start() and timer.stop():
+```
+    anonymouslib_timer CSR5Spmv_timer;
+    CSR5Spmv_timer.start();
+ 
+    err = A.spmv(alpha, d_y);
+    //cout << "spmv err = " << err << endl;
+    checkCudaErrors(cudaMemcpy(y, d_y, m * sizeof(VALUE_TYPE), cudaMemcpyDeviceToHost));
+ 
+    double CSR5Spmv_time = CSR5Spmv_timer.stop() / (double)NUM_RUN;
+```
+
+We will get GFlops, Bandwidth, and computation time we want via:
+```
+    if (NUM_RUN)
+        cout << "CSR5-based SpMV time = " << CSR5Spmv_time
+             << " ms. Bandwidth = " << gb/(1.0e+6 * CSR5Spmv_time)
+             << " GB/s. GFlops = " << gflop/(1.0e+6 * CSR5Spmv_time)  << " GFlops." << endl;
+```
+
+To measure and analysis the performance of the algorithm.
+We will also track the memory occupation condition for shared memory and global memory. And estimate the theoretical data exchange frequency for the proposed algorithm
 
 
+## Summary
+
+For our research we will be measuring the performance(space and time) of our proposed storage method when doing matrix multiplication.
+The analysis 
  
